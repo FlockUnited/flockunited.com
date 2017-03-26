@@ -1,0 +1,16 @@
+<header class="site-header">
+  <div class="inner-header">
+  <div class="logo-wrapper">
+    <a href="/"><img class="logo" src="/images/flock.jpeg"></a>
+  </div>
+    <nav class="site-nav">
+      <div class="trigger">
+        {% for page in site.pages | sort: "weight" %}
+        {% if page.weight %}
+                <a class="page-link {{ page.color }}" href="{{ page.url | prepend: site.baseurl }}">{{ page.fa-tag }}{{ page.title }}</a>
+            {% endif %}
+        {% endfor %}
+      </div>
+    </nav>
+  </div>
+</header>

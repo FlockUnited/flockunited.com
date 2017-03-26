@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+    <div class="page-content">
+    {% include header.html %}
+    <div class="intro">
+      <h1>{{ site.title }}</h1>
+      <span>{{ site.tagline }}</span>
+    </div>
+    <div class="wave">
+      <svg viewBox="0 -20 700 110" width="100%" height="110" preserveAspectRatio="none">
+      <path transform="translate(0, 20)" d="M0,10 c80,-22 240,0 350,18 c90,17 260,7.5 350,-20 v50 h-700" fill="#173C70" />
+    </svg>
+  </div>
+      <div id="home" class="wrapper">
+        <div class="inner-wrapper">
+        {{ content }}
+      </div>
+            <div class="footer">
+              {% include footer.html %}
+            </div>
+
+    </div>
+  </div>
+  </body>
+</html>

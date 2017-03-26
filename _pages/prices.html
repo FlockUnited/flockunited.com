@@ -1,0 +1,50 @@
+---
+layout: default
+title: Prices
+permalink: /prices/
+weight: 3
+page-title: ""
+color: green
+fa-tag: <i class="fa fa-usd green" aria-hidden="true"></i>
+---
+<h1>Riders</h1>
+<div class="packages">
+    <div class="package">
+        <h1>The Flat Rate</h1>
+        <h2>$5.00</h2>
+        <p>2-mile radius around the campus.</p>
+    </div>
+    <div class="package">
+        <h1>The Dollar Mile</h1>
+        <h2>$1.00<span>/mile</span></h2>
+        <p>Outside of the campus's 2-mile radius, up to 30 miles.</p>
+    </div>
+</div>
+<h1>Drivers</h1>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<div id="piechart" style="width: 900px; height: 500px;"></div>
+<script>
+    google.charts.load('current', {
+        'packages': ['corechart']
+    });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+            ['Task', 'Hours per Day'],
+            ['Driver', 8],
+            ['Flock', 2]
+        ]);
+
+        var options = {
+            'tooltip': {
+                trigger: 'none'
+            }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+    }
+</script>
