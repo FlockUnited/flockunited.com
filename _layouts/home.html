@@ -3,19 +3,24 @@
 {% include head.html %}
 
 <body>
-    <div class="page-content" id="home-wrapper">
-        <div id="home" class="wrapper">
-          <div class="inner-wrapper">
-              {{ content }}
-          </div>
-            <div class="intro">
-                <h1><img src="/images/flock.jpeg">{{ site.title }}</h1>
-                <h3>{{ site.tagline }}</h3>
-                <p>Flock is a ride-sharing startup designed by college students, for college students. Our vision is to provide safe, cost-friendly ridesharing with between students of the same university. After all, why ride with strangers when you have friends? </p>
-                {% include nav.html %}
-            </div>
+    <div class="home-base">
+        <div id="empty">
+              {% include social.html %}
         </div>
-      {% include social.html %}
+        <div class="video">
+            {{ content }}
+        </div>
+        <div class="about">
+          <div class="logo-wrapper">
+            <a href="/"><img src="/images/flock.jpeg"></a>
+          </div>
+          <div class="intro">
+            <h2>{{ site.tagline }}</h2>
+            <p>Flock is a ride-sharing startup designed by college students, for college students. Our vision is to provide safe, cost-friendly ridesharing with between students of the same university. After all, why ride with strangers when you have friends?
+                </p>
+              </div>
+            {% include nav.html %}
+        </div>
     </div>
 </body>
 

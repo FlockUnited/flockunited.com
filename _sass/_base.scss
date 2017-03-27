@@ -53,6 +53,12 @@ pre,
 ul {
     margin-bottom: 15px;
 }
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+}
 /**
  * Images
  */
@@ -152,13 +158,9 @@ pre > code {
 /**
  * Wrapper
  */
-.page-content{
-  width: 80%;
-  margin: 0 auto;
-}
-#home-wrapper{
-  padding-top: 10%;
-  width: 100%;  
+.page-content {
+    width: 80%;
+    margin: 0 auto;
 }
 /**
  * Clearfix
@@ -193,36 +195,28 @@ pre > code {
     display: flex;
 }
 
-.logo-wrapper {
-    flex-grow: 1;
-    min-width: 100px;
-}
-
-.logo-wrapper .logo {
-    width: 50px;
-    padding: 2px;
-    margin-top: 4px;
-}
-
 .site-nav {
+    width: 100%;
     line-height: 56px;
-    margin: 24px;
-    margin-left: 0;
+    margin: 24px 24px 24px 0;
 }
-.site-nav-chill{
-  width: 100%;
-  margin: 0 auto;
-  margin-bottom: 24px;
-  background-color: dark-gray;
+
+.site-nav-chill {
+    width: 100%;
+    margin: 0 auto 24px;
+    background-color: dark-gray;
 }
-.page-link-chill{
-  font-size: 20px;
-  margin-left: 12px;
-  color: black!important;
+
+.page-link-chill {
+    font-size: 20px;
+    margin-left: 12px;
+    color: black!important;
 }
-.page-link-chill:hover{
-  text-decoration: none;
+
+.page-link-chill:hover {
+    text-decoration: none;
 }
+
 .site-nav .page-link {
     line-height: 1.5;
     font-size: 24px;
@@ -255,7 +249,7 @@ pre > code {
 }
 
 .header-image {
-    height: 400px;
+    height: 500px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -281,73 +275,83 @@ pre > code {
 /**
  * Home
  */
-#home {
-    margin-left: 45px;
-    margin-right: 45px;
-    padding: 0;
-    position: relative;
+.home-base {
     display: flex;
-    max-width: auto;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1700px;
+    margin: 0 auto;
+}
+
+#empty {
+    width: 10%;
+    background-color: $blue;
+    display: flex;
     align-items: center;
-    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#empty a {
+    width: 100%;
+    padding: 14px;
+    color: $yellow;
+}
+
+#empty a:hover {
+    text-decoration: none;
+}
+
+.video {
+    height: 100vh;
+    width: 35%;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    align-items: center;
+    background-color: $yellow;
+}
+
+.about {
+    width: 55%;
+    height: 100vh;
+    padding: 0 32px;
+    display: flex;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between;
 }
 
 .intro {
-    margin-left: 25px;
-    margin-top: 0;
-margin-bottom: auto;
-max-width: 50%;
+    max-width: 500px;
 }
 
-.intro h1 {
-    font-size: 120px;
-    color: $blue;
-    font-weight: 500;
-    padding: 0;
-}
-.intro h1 img{
-  width: 150px;
-}
-.intro h3{
-  width: 100%;
-display: block;
-font-size: 24px;
-padding: 0;
-margin: 0;
-margin-bottom: 50px;
-
-}
-.intro p{
-      margin-bottom: 190px;
+.about::after,
+.about::before {
+    content: '';
 }
 
-.inner-wrapper {
-    width: 55%;
-    margin: 0 auto;
-    color: white;
-    font-weight: bold;
+.logo-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    -webkit-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
-.inner-wrapper h2 {
-    font-size: 45px;
-    font-style: italic;
-    letter-spacing: 1px;
-    font-weight: 100;
-}
-
-iframe {
-    display: block;
-    margin: 0 auto;
-    padding-bottom: 25px;
-}
-
-#home p {
-    font-size: 18px;
-    font-weight: normal;
-    margin-bottom: 45px;
+.logo-wrapper img {
+    width: 200px;
 }
 
 .iframe-container {
@@ -408,6 +412,7 @@ iframe {
     justify-content: center;
     text-align: center;
     flex-wrap: wrap;
+    height: 500px;
 }
 
 .profile {
@@ -443,6 +448,13 @@ iframe {
     font-size: 18px;
     font-weight: 100;
     color: gray;
+}
+.story{
+  margin-bottom: 55px;
+}
+.story p{
+  width: 80%;
+margin: 0 auto;
 }
 /**
  * Locations
@@ -519,12 +531,13 @@ iframe {
     text-align: center;
     color: #fff;
 }
-.social{
-  width: 100%;
-  background-color: #fff;
-  margin-top: -20px;
-  font-size: 12px!important;
-  text-align: center;
+
+.social {
+    width: 100%;
+    background-color: #fff;
+    margin-top: -20px;
+    font-size: 12px!important;
+    text-align: center;
 }
 
 .social a {
