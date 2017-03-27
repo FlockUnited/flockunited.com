@@ -17,3 +17,6 @@ collections:
 - profiles
 facebook: https://www.facebook.com/flockunited/
 twitter: https://twitter.com/FlockUnited
+prepend: https://128keaton.github.io/flockunited.com/images/
+gh-pages: https://128keaton.github.io/flockunited.com/
+githubPages: true
