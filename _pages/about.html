@@ -12,7 +12,7 @@ color: blue
       {% assign sorted = (site.profiles| sort: 'weight') | reverse %}
       {% for profile in sorted %}
     <div class="profile">
-        <div style="background: url('{{ profile.image }}');     background-size: cover;" class="profile-img"></div>
+        <div style="background: url('https://128keaton.github.io/flockunited.com/{{ profile.image }}');     background-size: cover;" class="profile-img"></div>
         <h3 class="profile-heading">{{ profile.name }}{% if profile.title != "" %}<br><span class="title">{{ profile.title }}</span>{% endif %}{% if profile.location != nil %}<br><span>{{ profile.location }}</span>{% endif %}</h3>
         <div class="profile-content">
             <p>{{ profile.content }}</p>
