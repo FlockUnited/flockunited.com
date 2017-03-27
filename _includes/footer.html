@@ -1,7 +1,15 @@
-<h2>Talk to us!</h2>
-<div class="social">
-    <a href="{{site.facebook}}" class="fa fa-facebook-official fa-4x"></a>
-    <a href="{{site.twitter}}" class="fa fa-twitter fa-4x"></a>
-    <a href="mailto:{{site.email}}" class="fa fa-envelope-o fa-4x"></a>
+<div class="inner-header">
+
+  <nav class="site-nav-chill">
+    <div class="trigger">
+      <a class="page-link-chill" href="/">Home</a>
+      {% for page in site.pages | sort: "weight" %}
+      {% if page.weight %}
+              <a class="page-link-chill" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+          {% endif %}
+      {% endfor %}
+    </div>
+  </nav>
 </div>
+
 <p>&copy 2017 FlockUnited.com</p>

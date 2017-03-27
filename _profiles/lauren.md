@@ -1,5 +1,5 @@
 ---
-image: /images/headshots/kevin.jpeg
+image: /images/headshots/lo.jpg
 name: Lauren Crowe
 title: Founder
 location: Jackson, TN
