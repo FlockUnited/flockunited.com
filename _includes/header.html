@@ -1,0 +1,10 @@
+<div class="header">
+      <a href="https://128keaton.github.io/flockunited.com/"><h1 class="header-title">Flock</h1></a>
+  <div class="inner-header">
+      {% for page in site.pages | sort: "weight" %}
+      {% if page.weight %}
+              <h3 class="page-link-chill"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></h3>
+          {% endif %}
+      {% endfor %}
+    </div>
+</div>

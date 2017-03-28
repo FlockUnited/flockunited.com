@@ -8,11 +8,17 @@ color: pink
 ---
 <div class="locations">
     <div class="location">
-      <h2>#1. University of Memphis   <span>Main Campus</span></h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13053.723372379174!2d-89.93775824999999!3d35.12092045!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x492405c3cfbd6ad3!2sUniversity+of+Memphis!5e0!3m2!1sen!2sus!4v1490500956097" width="600" height="450"
-            frameborder="0" style="border:0" allowfullscreen></iframe>
-
+      <div class="location-number">
+        <h1>1</h1>
+      </div>
+      <div class="inner-location" onclick="location.href='geo:35.119236,-89.937598'">
+        <h2>University of Memphis   <span>Main Campus</span></h2>
+        <div class="iframe-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13053.723372379174!2d-89.93775824999999!3d35.12092045!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x492405c3cfbd6ad3!2sUniversity+of+Memphis!5e0!3m2!1sen!2sus!4v1490500956097" allowfullscreen></iframe>
+        </div>
+            </div>
+    </div>
+    <div class="location" id="blank">
+        <h3 class="construction-notice">More coming soon</h3>
+    </div>
 </div>
-</div>
-
-  <h3 class="construction-notice">More coming soon</h3>

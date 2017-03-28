@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html>
 {% include head.html %}
-
 <body>
     <div class="home-base">
         <div id="empty">
-              {% include social.html %}
+              <a  id="mobile" href="{{ site.baseurl }}">Flock</a>
+            {% include social.html %}
         </div>
         <div class="video">
             {{ content }}
         </div>
         <div class="about">
-          <div class="logo-wrapper">
-            <a href="https://128keaton.github.io/flockunited.com/prices/"><img src="https://128keaton.github.io/flockunited.com/images/flock.jpeg"></a>
-          </div>
-          <div class="intro">
-            <h2>{{ site.tagline }}</h2>
-            <p>Flock is a ride-sharing startup designed by college students, for college students. Our vision is to provide safe, cost-friendly ridesharing with between students of the same university. After all, why ride with strangers when you have friends?
-                </p>
-              </div>
+            <div class="logo-wrapper">
+                <a href="{{ site.baseurl }}"><img src="{{ site.baseurl }}/images/flock.jpeg"></a>
+            </div>
+            <div class="intro">
+                <h2>{{ site.tagline }}</h2>
+                <p>{{ site.frontBlurb }} </p>
+            </div>
             {% include nav.html %}
+            <p id="footer">&copy 2017 FlockUnited.com</p>
         </div>
     </div>
 </body>
-
 </html>
