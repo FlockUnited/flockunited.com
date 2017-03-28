@@ -3,7 +3,7 @@ tagline: Ride-sharing designed by college students, for college students.
 email: flockunited1@gmail.com
 description:
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://128keaton.github.io/flockunited.com/" # the base hostname & protocol for your site, e.g. http://example.com
 include: ['_pages', 'images']
 # Build settings
 markdown: kramdown
