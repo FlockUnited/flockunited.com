@@ -305,9 +305,11 @@ a:hover {
 }
 
 .intro {
-    max-width: 500px;
+    max-width: 550px;
 }
-
+.intro h2{
+  font-size: 35px;
+}
 .about::after,
 .about::before {
     content: '';
