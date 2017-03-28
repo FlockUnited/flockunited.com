@@ -17,7 +17,7 @@
             </div>
             <div class="intro">
                 <h2>I need a ride
-                  <span data-words="to class|to work|home"></span>
+                  <span data-words="{% for location in site.locations %}{% if forloop.last == false %} {{ location }} | {% else %} {{ location }} {% endif %} {% endfor %}"></span>
                 </h2>
                 <p>{{ site.frontBlurb }} </p>
             </div>
