@@ -1,5 +1,5 @@
 ---
-image: /images/headshots/kevin.jpeg
+image: /images/headshots/blank.png
 name: Omar Lara
 location: Memphis, TN
 title: ""

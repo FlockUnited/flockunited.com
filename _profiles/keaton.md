@@ -1,5 +1,5 @@
 ---
-image: /images/headshots/kevin.jpeg
+image: /images/headshots/keaton.JPG
 name: Keaton Burleson
 location: Memphis, TN
 title: ""

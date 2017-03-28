@@ -1,5 +1,5 @@
 ---
-image: /images/headshots/kevin.jpeg
+image: /images/headshots/blank.png
 name: Madison Provence
 title: Co-founder
 location: Memphis, TN
