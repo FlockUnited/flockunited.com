@@ -264,8 +264,8 @@ a:hover {
     text-align: center;
 }
 
-#empty #mobile {
-    display: none;
+#empty #mobile,  #mobile img {
+    display: none!important;
 }
 
 #empty a {
@@ -301,7 +301,9 @@ a:hover {
     justify-content: space-between;
 }
 
-.logo-wrapper object , .header object,   #mobile object {
+#mobile img,
+.header img,
+.logo-wrapper img {
     width: 200px;
 }
 
@@ -566,13 +568,16 @@ a:hover {
         margin: 0 auto;
         background-color: $yellow;
     }
-
+    #mobile img{
+      display: inline!important;
+    }
     .home-base {
         display: block;
         max-width: 100%;
     }
-    .home-footer #footer{
-      text-align: center;
+
+    .home-footer #footer {
+        text-align: center;
     }
 
     .video {
