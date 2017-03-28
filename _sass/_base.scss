@@ -24,7 +24,7 @@ ul {
  * Basic styling
  */
 body {
-    font: 400 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font: 400 16px/1.5 'Fira Sans', sans-serif;
     color: #111;
     background-color: #fdfdfd;
     -webkit-text-size-adjust: 100%;
@@ -119,72 +119,13 @@ a:hover {
     color: #111;
     text-decoration: underline;
 }
-/**
- * Blockquotes
- */
-blockquote {
-    color: #828282;
-    border-left: 4px solid #e8e8e8;
-    padding-left: 15px;
-    font-size: 18px;
-    letter-spacing: -1px;
-    font-style: italic;
-}
 
-blockquote > :last-child {
-    margin-bottom: 0;
-}
-/**
- * Code formatting
- */
-code,
-pre {
-    font-size: 15px;
-    border: 1px solid #e8e8e8;
-    border-radius: 3px;
-    background-color: #eef;
-}
-
-code {
-    padding: 1px 5px;
-}
-
-pre {
-    padding: 8px 12px;
-    overflow-x: auto;
-}
-
-pre > code {
-    border: 0;
-    padding-right: 0;
-    padding-left: 0;
-}
 /**
  * Wrapper
  */
 .page-content {
     width: 80%;
     margin: 0 auto;
-}
-/**
- * Clearfix
- */
-.footer-col-wrapper:after,
-.wrapper:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-/**
- * Icons
- */
-.icon > svg {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.icon > svg path {
-    fill: #828282;
 }
 /**
  * Site header
@@ -300,22 +241,7 @@ pre > code {
     margin-bottom: 25px;
     z-index: 4;
 }
-@include media-query($on-palm) {
-    .inner-header {
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        flex-wrap: wrap;
-    }
 
-    .logo-wrapper .logo {
-        width: 80px;
-    }
-
-    .site-nav {
-        margin-right: 0;
-    }
-}
 /**
  * Home
  */
@@ -559,54 +485,35 @@ pre > code {
     padding-right: 12px;
     border-top-right-radius: 12px;
 }
-@include media-query($on-palm) {
-    .packages {
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        flex-wrap: wrap;
-    }
 
-    .package {
-        margin: 4px;
-    }
-
-    .package h1 {
-        font-size: 42px;
-    }
-}
 /**
  * Site footer
  */
-.footer {
-    width: 100%;
-    text-align: center;
-    color: #fff;
+
+#footer {
+    margin-bottom: 20px;
 }
 
-.social {
-    width: 100%;
-    background-color: #fff;
-    margin-top: -20px;
-    font-size: 12px!important;
-    text-align: center;
-}
+/**
+ * Mobile
+ */
 
-.social a {
-    margin: 12px;
-    color: rgb(146, 146, 146)!important;
-}
-
-#page,
-#page .social a {
-    color: gray;
-}
-
-.social a:hover {
-    text-decoration: none;
-    cursor: pointer;
-}
 @include media-query($on-palm) {
+
+  .inner-header {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-wrap: wrap;
+  }
+
+  .logo-wrapper .logo {
+      width: 80px;
+  }
+
+  .site-nav {
+      margin-right: 0;
+  }
     .page-link-chill {
         margin: 12px;
     }
@@ -700,4 +607,22 @@ pre > code {
     #blank {
         display: none!important;
     }
+    /**
+     * Prices
+     */
+
+     .packages {
+         align-items: center;
+         justify-content: center;
+         text-align: center;
+         flex-wrap: wrap;
+     }
+
+     .package {
+         margin: 4px;
+     }
+
+     .package h1 {
+         font-size: 42px;
+     }
 }
