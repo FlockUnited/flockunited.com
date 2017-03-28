@@ -510,7 +510,16 @@ a:hover {
 .home-footer #footer{
   text-align: left;
 }
-
+/**
+ * 404
+ */
+ .fourohfour{
+   text-align: center;
+ }
+ .fourohfour img{
+   max-width: 200px;
+   border: 5px solid beige;
+ }
 /**
  * Mobile
  */
