@@ -12,8 +12,8 @@ $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
-$blue:             #173C70;
-$yellow:           #FFED2C;
+$blue:             #448AFF;
+$yellow:           #FFEB3B;
 
 // Width of the content area
 $content-width:    800px;
@@ -47,7 +47,6 @@ body, html{
   margin: 0;
 padding: 0;
 height: 100%;
-font-family: "Gotham Rounded A", "Gotham Rounded B", -apple-system, sans-serif;
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale
 }
