@@ -195,8 +195,9 @@ pre > code {
     padding-bottom: 20px;
     text-align: center;
 }
-.header img{
-  width: 200px;
+
+.header img {
+    width: 200px;
 }
 
 .header a:hover,
@@ -260,9 +261,6 @@ pre > code {
 .site-nav .page-link {
     line-height: 1.5;
     font-size: 18px;
-    -webkit-border-radius: 12;
-    -moz-border-radius: 12;
-    border-radius: 12px;
     padding: 10px 20px;
     text-decoration: none;
     color: white;
@@ -616,22 +614,26 @@ pre > code {
     #empty {
         width: 100%;
         flex-direction: row;
+        background-color: #fff;
     }
 
     #empty a {
         width: auto;
-        flex-shrink: 1;
-        font-size: 30px;
+        font-size: 50px;
         padding: 5px;
+        color: $blue;
     }
 
-    #empty #mobile {
-        flex-grow: 1;
+    #mobile {
         color: #fff;
-        font-size: 45px;
-        text-align: left;
-        padding-left: 10px;
+        background: url("/images/FLOCK.png");
         display: block;
+        background-size: cover;
+        background-position: center;
+        padding: 42px;
+        height: 100px;
+        width: 80%;
+        margin: 0 auto;
     }
 
     .home-base {
