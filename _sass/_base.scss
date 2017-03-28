@@ -314,6 +314,16 @@ a:hover {
 .about::before {
     content: '';
 }
+/* WORDS SWAP */
+[data-words]{
+  vertical-align: top;
+  position: static;
+}
+[data-words] > span{
+  position: absolute;
+  color: $blue;
+  border-bottom: 4px solid $yellow;
+}
 
 .logo-wrapper {
     display: flex;
@@ -597,9 +607,6 @@ a:hover {
         margin: 0;
     }
 
-    #footer {
-        text-align: center;
-    }
     /**
      * Locations
      */
