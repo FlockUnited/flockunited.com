@@ -119,7 +119,6 @@ a:hover {
     color: #111;
     text-decoration: underline;
 }
-
 /**
  * Wrapper
  */
@@ -241,7 +240,6 @@ a:hover {
     margin-bottom: 25px;
     z-index: 4;
 }
-
 /**
  * Home
  */
@@ -303,25 +301,32 @@ a:hover {
     justify-content: space-between;
 }
 
+.logo-wrapper object , .header object,   #mobile object {
+    width: 200px;
+}
+
 .intro {
     max-width: 550px;
 }
-.intro h2{
-  font-size: 35px;
+
+.intro h2 {
+    font-size: 35px;
 }
+
 .about::after,
 .about::before {
     content: '';
 }
 /* WORDS SWAP */
-[data-words]{
-  vertical-align: top;
-  position: static;
+[data-words] {
+    vertical-align: top;
+    position: static;
 }
-[data-words] > span{
-  position: absolute;
-  color: $blue;
-  border-bottom: 4px solid $yellow;
+
+[data-words] > span {
+    position: absolute;
+    color: $blue;
+    border-bottom: 4px solid $yellow;
 }
 
 .logo-wrapper {
@@ -496,49 +501,48 @@ a:hover {
     padding-right: 12px;
     border-top-right-radius: 12px;
 }
-
 /**
  * Site footer
  */
-
 #footer {
     margin-bottom: 20px;
     text-align: center;
     color: #c1bdbd;
 }
-.home-footer #footer{
-  text-align: left;
+
+.home-footer #footer {
+    text-align: left;
 }
 /**
  * 404
  */
- .fourohfour{
-   text-align: center;
- }
- .fourohfour img{
-   max-width: 200px;
-   border: 5px solid beige;
- }
+.fourohfour {
+    text-align: center;
+}
+
+.fourohfour img {
+    max-width: 200px;
+    border: 5px solid beige;
+}
 /**
  * Mobile
  */
-
 @include media-query($on-palm) {
+    .inner-header {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+    }
 
-  .inner-header {
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      flex-wrap: wrap;
-  }
+    .logo-wrapper .logo {
+        width: 80px;
+    }
 
-  .logo-wrapper .logo {
-      width: 80px;
-  }
+    .site-nav {
+        margin-right: 0;
+    }
 
-  .site-nav {
-      margin-right: 0;
-  }
     .page-link-chill {
         margin: 12px;
     }
@@ -546,32 +550,29 @@ a:hover {
     #empty {
         width: 100%;
         flex-direction: row;
-        background-color: #fff;
     }
 
     #empty a {
         width: auto;
         font-size: 50px;
-        padding: 5px;
-        color: $blue;
+        padding: 10px;
+        color: $yellow;
     }
 
     #mobile {
         color: #fff;
-        background: url("/images/FLOCK.png");
         display: block;
-        background-size: cover;
-        background-position: center;
-        padding: 42px;
-        height: 100px;
-        width: 80%;
+        text-align: center;
         margin: 0 auto;
-        max-width: 300px;
+        background-color: $yellow;
     }
 
     .home-base {
         display: block;
         max-width: 100%;
+    }
+    .home-footer #footer{
+      text-align: center;
     }
 
     .video {
@@ -614,7 +615,6 @@ a:hover {
     .iframe-container {
         margin: 0;
     }
-
     /**
      * Locations
      */
@@ -632,19 +632,18 @@ a:hover {
     /**
      * Prices
      */
+    .packages {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+    }
 
-     .packages {
-         align-items: center;
-         justify-content: center;
-         text-align: center;
-         flex-wrap: wrap;
-     }
+    .package {
+        margin: 4px;
+    }
 
-     .package {
-         margin: 4px;
-     }
-
-     .package h1 {
-         font-size: 42px;
-     }
+    .package h1 {
+        font-size: 42px;
+    }
 }
