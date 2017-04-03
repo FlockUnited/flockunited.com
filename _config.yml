@@ -17,7 +17,7 @@ exclude:
 collections:
 - profiles
 # Custom fields
-locations: ["home", "to class", "to work", "to Mordor"]
+locations: ["home", "to class", "to work", "to the party", "to the store"]
 facebook: https://www.facebook.com/flockunited/
 twitter: https://twitter.com/FlockUnited
 prepend: https://128keaton.github.io/flockunited.com/images/

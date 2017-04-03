@@ -5,4 +5,4 @@ location: Memphis, TN
 title: ""
 weight: 0
 ---
-Consumer behavior major.
+Consumer behavior major at Christian Brothers University.

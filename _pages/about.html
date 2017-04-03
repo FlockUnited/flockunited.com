@@ -4,22 +4,39 @@ title: About
 page-title: Meet the Flock
 permalink: /about/
 weight: 1
-fa-tag: <i class="fa fa-users" aria-hidden="true"></i>
+header-image: /images/crew.jpeg
 color: blue
+fa-tag: <i class="fa fa-users" aria-hidden="true"></i>
 ---
 <div class="profiles">
       {% assign sorted = (site.profiles| sort: 'weight') | reverse %}
       {% for profile in sorted %}
     <div class="profile">
-        <div style="background: url('{{ site.url }}/{{ profile.image }}');     background-size: cover;" class="profile-img"></div>
-        <h3 class="profile-heading">{{ profile.name }}{% if profile.title != "" %}<br><span class="title">{{ profile.title }}</span>{% endif %}{% if profile.location != nil %}<br><span>{{ profile.location }}</span>{% endif %}</h3>
+        <div style="background: url('{{ profile.image }}');     background-size: cover;" class="profile-img"></div>
+        <h3 class="profile-heading">{{ profile.name }}{% if profile.title != nil %}<br><span class="title">{{ profile.title }}</span>{% endif %}{% if profile.location != nil %}<br><span>{{ profile.location }}</span>{% endif %}</h3>
         <div class="profile-content">
             <p>{{ profile.content }}</p>
         </div>
     </div>
 {% endfor %}
 </div>
-<div class="story">
-  <h1>Our Story</h1>
-  <p>Flock United was founded by Lauren Crowe and co-founded by Madison Provence and Kevin Murphy. Flock United is the result of a co-op effort between two colleges in the Memphis area, University of Memphis and Christian Brothers University. </p>
+<h1>Our Story</h1>
+<p>Flock United was founded by Lauren Crowe and co-founded by Madison Provence and Kevin Murphy. Flock United is the result of a co-op effort between two colleges in the Memphis area, University of Memphis and Christian Brothers University. </p>
+<h1>Our Core Values</h1>
+<div class="core-values">
+  <div class="value">
+    <h1>Integrity</h1>
+  </div>
+  <div class="value">
+    <h1>Awareness</h1>
+  </div>
+  <div class="value">
+    <h1>Passion</h1>
+  </div>
+  <div class="value">
+    <h1>Communication</h1>
+  </div>
+  <div class="value">
+    <h1>Respect</h1>
+  </div>
 </div>

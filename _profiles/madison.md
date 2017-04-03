@@ -5,4 +5,4 @@ title: Co-founder
 location: Memphis, TN
 weight: 1
 ---
-Nursing major, with a minor in fort building.
+Nursing major at the University of Memphis.
