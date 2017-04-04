@@ -44,7 +44,7 @@ function dataWord () {
     // ANIMATE AND LOOP
     (function loop(){
       $self.animate({ width: $words.eq( c ).width() });
-      $words.stop().fadeOut().eq(c).fadeIn().delay(4000).show(0, loop);
+      $words.stop().fadeOut().eq(c).fadeIn().delay(3000).show(0, loop);
       c = ++c % tot;
     }());
 

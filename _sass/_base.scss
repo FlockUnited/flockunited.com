@@ -376,10 +376,6 @@ a:hover {
     margin-bottom: 35px;
 }
 
-div.profile:nth-child(odd) .profile-img {
-  top: inherit;
-  bottom: 0;
-}
 .profile::after {
     clear: both;
 }
@@ -388,31 +384,13 @@ div.profile:nth-child(odd) .profile-img {
     margin-left: -5px;
     margin-right: -5px;
     width: 188px;
-    height: 300px;
+    height: 400px;
     padding: 12px;
-}
-
-.inner-profile {
-    position: absolute;
-    top: 0;
-    background-color: white;
-    padding: 12px;
-    height: 300px;
-    font-size: 15px;
-    opacity: 0.0;
-    z-index: 100;
-    -webkit-transition: all 500ms ease-in-out;
-    -moz-transition: all 500ms ease-in-out;
-    -ms-transition: all 500ms ease-in-out;
-    -o-transition: all 500ms ease-in-out;
-    transition: all 500ms ease-in-out;
 }
 
 .profile-img {
     border-radius: 100%;
     display: block;
-    position: absolute;
-    top: 0;
     margin-bottom: 20px;
     width: 160px;
     height: 160px;
@@ -423,8 +401,8 @@ div.profile:nth-child(odd) .profile-img {
     margin: 0 auto;
 }
 
-.profile-img:hover  + .inner-profile {
-    opacity: 1.0;
+.profile-img:hover {
+    transform: rotateZ(3deg);
 }
 
 .profile .title {
@@ -505,7 +483,9 @@ div.profile:nth-child(odd) .profile-img {
 }
 
 .package span {
-    font-size: 12px;
+    font-size: 18px;
+    width: 100%;
+    display: block;
 }
 
 .package-features {
@@ -585,13 +565,11 @@ div.profile:nth-child(odd) .profile-img {
         width: 80%;
     }
 }
-
 @include media-query(1360px) {
     .profile-img {
         position: relative;
     }
 }
-
 @include media-query($on-palm) {
     .inner-header {
         align-items: center;
@@ -716,19 +694,22 @@ div.profile:nth-child(odd) .profile-img {
     .package h1 {
         font-size: 42px;
     }
-    .inner-profile{
-      position: relative;
-      border: none;
-      opacity: 1.0!important;
+
+    .inner-profile {
+        position: relative;
+        border: none;
+        opacity: 1.0!important;
     }
-    .profile{
-      width: 100%;
-      max-width: 100%;
+
+    .profile {
+        width: 100%;
+        max-width: 100%;
         margin: 0 auto;
     }
-    .profiles{
-      width: 100%;
-      display: block;
-      margin: 0 auto;
+
+    .profiles {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
     }
 }
