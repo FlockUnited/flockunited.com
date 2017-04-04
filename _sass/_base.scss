@@ -376,13 +376,18 @@ a:hover {
     margin-bottom: 35px;
 }
 
+div.profile:nth-child(odd) .profile-img {
+  top: inherit;
+  bottom: 0;
+}
 .profile::after {
     clear: both;
 }
 
 .profile {
-    margin: 12px;
-    max-width: 188px;
+    margin-left: -5px;
+    margin-right: -5px;
+    width: 188px;
     height: 300px;
     padding: 12px;
 }
@@ -391,11 +396,11 @@ a:hover {
     position: absolute;
     top: 0;
     background-color: white;
-    border: 2px solid black;
     padding: 12px;
     height: 300px;
     font-size: 15px;
     opacity: 0.0;
+    z-index: 100;
     -webkit-transition: all 500ms ease-in-out;
     -moz-transition: all 500ms ease-in-out;
     -ms-transition: all 500ms ease-in-out;
@@ -406,6 +411,8 @@ a:hover {
 .profile-img {
     border-radius: 100%;
     display: block;
+    position: absolute;
+    top: 0;
     margin-bottom: 20px;
     width: 160px;
     height: 160px;
@@ -578,11 +585,13 @@ a:hover {
         width: 80%;
     }
 }
-@include media-query(1905px) {
-    .core-values {
-        width: 80%;
+
+@include media-query(1360px) {
+    .profile-img {
+        position: relative;
     }
 }
+
 @include media-query($on-palm) {
     .inner-header {
         align-items: center;
