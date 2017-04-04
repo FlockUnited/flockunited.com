@@ -264,7 +264,8 @@ a:hover {
     text-align: center;
 }
 
-#empty #mobile,  #mobile img {
+#empty #mobile,
+#mobile img {
     display: none!important;
 }
 
@@ -372,7 +373,7 @@ a:hover {
     justify-content: center;
     text-align: center;
     flex-wrap: wrap;
-    margin-bottom: 55px;
+    margin-bottom: 35px;
 }
 
 .profile::after {
@@ -382,8 +383,24 @@ a:hover {
 .profile {
     margin: 12px;
     max-width: 188px;
-    height: 400px;
+    height: 300px;
     padding: 12px;
+}
+
+.inner-profile {
+    position: absolute;
+    top: 0;
+    background-color: white;
+    border: 2px solid black;
+    padding: 12px;
+    height: 300px;
+    font-size: 15px;
+    opacity: 0.0;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
 }
 
 .profile-img {
@@ -399,8 +416,8 @@ a:hover {
     margin: 0 auto;
 }
 
-.profile-img:hover {
-    transform: rotateZ(3deg);
+.profile-img:hover  + .inner-profile {
+    opacity: 1.0;
 }
 
 .profile .title {
@@ -483,9 +500,11 @@ a:hover {
 .package span {
     font-size: 12px;
 }
-.package-features{
-  text-align: left;
+
+.package-features {
+    text-align: left;
 }
+
 .package h1 {
     font-size: 35px;
     font-weight: 100;
@@ -496,10 +515,11 @@ a:hover {
     background-color: $blue;
     width: 100%;
     display: block;
-     margin-bottom: 0!important;
-     padding-top: 20px;
+    margin-bottom: 0 !important;
+    padding-top: 20px;
 }
-.package h2{
+
+.package h2 {
     background-color: $yellow;
     height: 70px;
     padding-top: 20px;
@@ -530,35 +550,39 @@ a:hover {
 /**
  * Core Values
  */
- .core-values{
-   width: 100%;
-   display: flex;
-   align-items: center;
-   justify-content: space-around;
-   margin-bottom: 25px;
-   flex-wrap: wrap;
- }
+.core-values {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
 
-.value{
-  position: relative;
-
-    line-height: 200px;
+.value {
+    position: relative;
     text-align: center;
-
-
-        margin: 40px;
-    
-
-}
-.value h1{
-
-      font-size: 30px;
-      color: $blue;
+    margin: 20px;
 }
 
+.value h1 {
+    font-size: 30px;
+    color: $blue;
+}
 /**
  * Mobile
  */
+@include media-query(1200px) {
+    .core-values {
+        width: 80%;
+    }
+}
+@include media-query(1905px) {
+    .core-values {
+        width: 80%;
+    }
+}
 @include media-query($on-palm) {
     .inner-header {
         align-items: center;
@@ -598,9 +622,11 @@ a:hover {
         margin: 0 auto;
         background-color: $yellow;
     }
-    #mobile img{
-      display: inline!important;
+
+    #mobile img {
+        display: inline!important;
     }
+
     .home-base {
         display: block;
         max-width: 100%;
@@ -680,5 +706,20 @@ a:hover {
 
     .package h1 {
         font-size: 42px;
+    }
+    .inner-profile{
+      position: relative;
+      border: none;
+      opacity: 1.0!important;
+    }
+    .profile{
+      width: 100%;
+      max-width: 100%;
+        margin: 0 auto;
+    }
+    .profiles{
+      width: 100%;
+      display: block;
+      margin: 0 auto;
     }
 }
