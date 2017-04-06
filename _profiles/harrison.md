@@ -1,5 +1,5 @@
 ---
-image: /images/headshots/blank.png
+image: /images/headshots/harrison.jpg
 name: Harrison Marshall
 location: Memphis, TN
 title: ""

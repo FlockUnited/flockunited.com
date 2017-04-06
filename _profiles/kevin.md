@@ -1,5 +1,5 @@
 ---
-image: /images/headshots/kevin.jpeg
+image: /images/headshots/kevin.jpg
 name: Kevin Murphy
 title: Co-founder
 location: Chicago, IL
