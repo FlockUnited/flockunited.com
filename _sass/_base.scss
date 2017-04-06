@@ -320,9 +320,8 @@ a:hover {
 
 .about-text {
     margin-top: 100px;
-      max-width: 550px;
-      width: 100%;
-
+    max-width: 550px;
+    width: 100%;
 }
 
 .about-text p {
@@ -396,11 +395,12 @@ a:hover {
 .profiles {
     display: flex;
     width: 100%;
+    max-width: 600px;
     align-items: center;
     justify-content: center;
     text-align: center;
     flex-wrap: wrap;
-    margin-bottom: 35px;
+    margin: 0 auto;
 }
 
 .profile::after {
@@ -411,8 +411,8 @@ a:hover {
     margin-left: -5px;
     margin-right: -5px;
     width: 188px;
-    height: 400px;
-    padding: 12px;
+    height: 440px;
+    padding: 22px;
 }
 
 .profile-img {
@@ -675,8 +675,7 @@ a:hover {
     }
 
     .about-text {
-      margin: 20px auto 0;
-
+        margin: 20px auto 0;
     }
 
     .logo-wrapper {
