@@ -255,7 +255,6 @@ a:hover {
 }
 
 #empty {
-    width: 10%;
     background-color: $blue;
     display: flex;
     align-items: center;
@@ -264,7 +263,24 @@ a:hover {
     text-align: center;
 }
 
-#empty #mobile,  #mobile img {
+.fixed-sidebar {
+    width: 35%;
+    height: 100%;
+}
+
+.inner-sidebar {
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    width: 35%;
+}
+
+#empty #mobile,
+#mobile img {
     display: none!important;
 }
 
@@ -282,6 +298,7 @@ a:hover {
     height: 100vh;
     width: 35%;
     display: flex;
+    flex-grow: 1;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -291,7 +308,7 @@ a:hover {
 
 .about {
     width: 55%;
-    height: 100vh;
+    margin-top: 150px;
     padding: 0 32px;
     display: flex;
     -ms-flex-flow: column;
@@ -299,6 +316,16 @@ a:hover {
     -webkit-box-pack: space-between;
     -ms-flex-pack: space-between;
     justify-content: space-between;
+}
+
+.about-text {
+    margin-top: 100px;
+    max-width: 550px;
+    width: 100%;
+}
+
+.about-text p {
+    margin-bottom: 50px;
 }
 
 #mobile img,
@@ -368,11 +395,12 @@ a:hover {
 .profiles {
     display: flex;
     width: 100%;
+    max-width: 600px;
     align-items: center;
     justify-content: center;
     text-align: center;
     flex-wrap: wrap;
-    margin-bottom: 55px;
+    margin: 0 auto;
 }
 
 .profile::after {
@@ -380,10 +408,11 @@ a:hover {
 }
 
 .profile {
-    margin: 12px;
-    max-width: 188px;
-    height: 400px;
-    padding: 12px;
+    margin-left: -5px;
+    margin-right: -5px;
+    width: 188px;
+    height: 440px;
+    padding: 22px;
 }
 
 .profile-img {
@@ -481,11 +510,15 @@ a:hover {
 }
 
 .package span {
-    font-size: 12px;
+    font-size: 18px;
+    width: 100%;
+    display: block;
 }
-.package-features{
-  text-align: left;
+
+.package-features {
+    text-align: left;
 }
+
 .package h1 {
     font-size: 35px;
     font-weight: 100;
@@ -496,10 +529,11 @@ a:hover {
     background-color: $blue;
     width: 100%;
     display: block;
-     margin-bottom: 0!important;
-     padding-top: 20px;
+    margin-bottom: 0 !important;
+    padding-top: 20px;
 }
-.package h2{
+
+.package h2 {
     background-color: $yellow;
     height: 70px;
     padding-top: 20px;
@@ -530,35 +564,40 @@ a:hover {
 /**
  * Core Values
  */
- .core-values{
-   width: 100%;
-   display: flex;
-   align-items: center;
-   justify-content: space-around;
-   margin-bottom: 25px;
-   flex-wrap: wrap;
- }
 
-.value{
-  position: relative;
+.core-values {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
 
-    line-height: 200px;
+.value {
+    position: relative;
     text-align: center;
-
-
-        margin: 40px;
-
-
-}
-.value h1{
-
-      font-size: 30px;
-      color: $blue;
+    margin: 20px;
 }
 
+.value h1 {
+    font-size: 30px;
+    color: $blue;
+}
 /**
  * Mobile
  */
+@include media-query(1200px) {
+    .core-values {
+        width: 80%;
+    }
+}
+@include media-query(1360px) {
+    .profile-img {
+        position: relative;
+    }
+}
 @include media-query($on-palm) {
     .inner-header {
         align-items: center;
@@ -569,6 +608,16 @@ a:hover {
 
     .logo-wrapper .logo {
         width: 80px;
+    }
+
+    .fixed-sidebar {
+        width: auto;
+        height: auto;
+    }
+
+    .inner-sidebar {
+        width: 100%;
+        position: relative;
     }
 
     .site-nav {
@@ -595,12 +644,15 @@ a:hover {
         color: #fff;
         display: block;
         text-align: center;
+        width: 100%;
         margin: 0 auto;
         background-color: $yellow;
     }
-    #mobile img{
-      display: inline!important;
+
+    #mobile img {
+        display: inline!important;
     }
+
     .home-base {
         display: block;
         max-width: 100%;
@@ -616,9 +668,15 @@ a:hover {
     }
 
     .about {
+        margin-top: 0;
         display: block;
         width: 100%;
         height: auto;
+        padding: 10px;
+    }
+
+    .about-text {
+        margin: 20px auto 0;
     }
 
     .logo-wrapper {
@@ -630,7 +688,7 @@ a:hover {
     }
 
     .intro h2 {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .intro {
@@ -681,5 +739,23 @@ a:hover {
     .package h1 {
         font-size: 32px;
         height: 120px;
+    }
+
+    .inner-profile {
+        position: relative;
+        border: none;
+        opacity: 1.0!important;
+    }
+
+    .profile {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .profiles {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
     }
 }

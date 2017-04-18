@@ -1,8 +1,8 @@
 ---
-image: /images/headshots/kevin.jpeg
+image: /images/headshots/kevin.jpg
 name: Kevin Murphy
 title: Co-founder
 location: Chicago, IL
-weight: 1
+weight: 5
 ---
 Biomedical engineering major at the University of Memphis

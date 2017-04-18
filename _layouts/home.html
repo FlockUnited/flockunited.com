@@ -4,14 +4,22 @@
 
 <body>
     <div class="home-base">
-        <a id="mobile" href="{{ site.baseurl }}"><img src="{{ site.baseurl }}/images/FLOCK.svg"></a>
-        <div id="empty">
-            {% include social.html %}
+      <div class="fixed-sidebar">
+        <div class="inner-sidebar">
+          <a id="mobile" href="{{ site.baseurl }}"><img src="{{ site.baseurl }}/images/FLOCK.svg"></a>
+          <div id="empty">
+              {% include social.html %}
+          </div>
+          <div class="video">
+              <div class="iframe-container">
+                  <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fflockunited%2Fvideos%2F762604063890852%2F&show_text=0&width=560" style="border:12px;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"
+                      allowFullScreen="true"></iframe>
+              </div>
+          </div>
         </div>
-        <div class="video">
-            {{ content }}
-        </div>
+      </div>
         <div class="about">
+          <div class="inner-about">
             <div class="logo-wrapper">
                 <a href="{{ site.baseurl }}"><img src="{{ site.baseurl }}/images/FLOCK.svg"></a>
             </div>
@@ -19,41 +27,49 @@
                 <h2>I need a ride
                   <span data-words="{% for location in site.locations %}{% if forloop.last == false %} {{ location }} | {% else %} {{ location }} {% endif %} {% endfor %}"></span>
                 </h2>
-                <p>{{ site.frontBlurb }} </p>
+                <p>{{ page.hero-text-one }} </p>
+                      <p>{{ page.hero-text-two }} </p>
             </div>
             {% include nav.html %}
+          </div>
+          {{ content }}
             <div class="home-footer">{% include footer.html %}</div>
         </div>
+
     </div>
 </body>
 <script type="text/javascript">
-function dataWord () {
+    function dataWord() {
 
-  $("[data-words]").attr("data-words", function(i, d){
-    var $self  = $(this),
-        $words = d.split("|"),
-        tot    = $words.length,
-        c      = 0;
+        $("[data-words]").attr("data-words", function(i, d) {
+            var $self = $(this),
+                $words = d.split("|"),
+                tot = $words.length,
+                c = 0;
 
-    // CREATE SPANS INSIDE SPAN
-    for(var i=0; i<tot; i++) $self.append($('<span/>',{text:$words[i]}));
+            // CREATE SPANS INSIDE SPAN
+            for (var i = 0; i < tot; i++) $self.append($('<span/>', {
+                text: $words[i]
+            }));
 
-    // COLLECT WORDS AND HIDE
-    $words = $self.find("span").hide();
+            // COLLECT WORDS AND HIDE
+            $words = $self.find("span").hide();
 
-    // ANIMATE AND LOOP
-    (function loop(){
-      $self.animate({ width: $words.eq( c ).width() });
-      $words.stop().fadeOut().eq(c).fadeIn().delay(4000).show(0, loop);
-      c = ++c % tot;
-    }());
+            // ANIMATE AND LOOP
+            (function loop() {
+                $self.animate({
+                    width: $words.eq(c).width()
+                });
+                $words.stop().fadeOut().eq(c).fadeIn().delay(3000).show(0, loop);
+                c = ++c % tot;
+            }());
 
-  });
+        });
 
-}
+    }
 
-// dataWord(); // If you don't use external fonts use this on DOM ready; otherwise use:
-$(window).on("load", dataWord);
+    // dataWord(); // If you don't use external fonts use this on DOM ready; otherwise use:
+    $(window).on("load", dataWord);
 </script>
 
 </html>
