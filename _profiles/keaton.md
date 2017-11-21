@@ -5,4 +5,4 @@ location: Memphis, TN
 title: "Web Designer"
 weight: 1
 ---
-Future computer science major at University of Memphis.
+Computer science major at the University of Memphis
